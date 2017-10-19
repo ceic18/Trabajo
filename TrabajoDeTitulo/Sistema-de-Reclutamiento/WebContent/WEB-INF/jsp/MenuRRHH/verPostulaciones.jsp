@@ -37,25 +37,22 @@
                         <table class="table table-striped table-inverse table-bordered table-sm ">
                             <thead>
                                 <tr class="bg-primary">
-                                    <th>#</th>
+                                    <th>ID</th>
+                                    <th>Usuario</th>
+                                    <th>Contraseña</th>
                                     <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Edad</th>
-                                    <th>Fecha</th>
-                                    <th>Puntos</th>
-                                    <th>Ficha</th>
+<!--                                     <th>Fecha</th> -->
+<!--                                     <th>Puntos</th> -->
+<!--                                     <th>Ficha</th> -->
                                 </tr>
                             </thead>
                             <tbody>
 	                            <c:forEach items="${datos}" var="dato">
 	                            	 <tr>
-	                                    <th scope="row"><c:out value="${dato}"></c:out></th>
-	                                    <td>-</td>
-	                                    <td>-</td>
-	                                    <td>-</td>
-	                                    <td>-</td>
-	                                    <td>-</td>
-	                                    <td>-</td>
+	                                    <th scope="row"><c:out value="${dato.id}"></c:out></th>
+	                                    <th scope="row"><c:out value="${dato.user}"></c:out></th>
+	                                    <th scope="row"><c:out value="${dato.pass}"></c:out></th>
+	                                    <th scope="row"><c:out value="${dato.nombre}"></c:out></th>
 	                                </tr>
 	                            </c:forEach>
                             </tbody>

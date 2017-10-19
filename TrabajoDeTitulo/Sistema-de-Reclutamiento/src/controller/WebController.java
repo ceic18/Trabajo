@@ -1,6 +1,7 @@
 package controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -96,7 +97,7 @@ public class WebController {
     	
         ModelAndView mav = new ModelAndView();
         String sql = "select * from usuarios";
-        List datos = this.jdbcTemplate.queryForList(sql);
+        List<Map<String, Object>> datos = this.jdbcTemplate.queryForList(sql);
         mav.addObject("datos", datos);
         mav.setViewName("MenuRRHH/verPostulaciones");
 
