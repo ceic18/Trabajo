@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import modelo.Conectar;
+//import modelo.Conectar;
 
 
 @Controller
 //@RequestMapping("/menu.htm")
 public class WebController {
 
-	private JdbcTemplate jdbcTemplate;
-	
-	public WebController() {
-		Conectar con = new Conectar();
-		this.jdbcTemplate = new JdbcTemplate(con.conectar());
-	}
+//	private JdbcTemplate jdbcTemplate;
+//	
+//	public WebController() {
+//		Conectar con = new Conectar();
+//		this.jdbcTemplate = new JdbcTemplate(con.conectar());
+//	}
 	
     @RequestMapping(method = RequestMethod.GET)
     public String Forzar(Model model) {
@@ -97,8 +97,8 @@ public class WebController {
     	
         ModelAndView mav = new ModelAndView();
         String sql = "select * from usuarios";
-        List<Map<String, Object>> datos = this.jdbcTemplate.queryForList(sql);
-        mav.addObject("datos", datos);
+//        List<Map<String, Object>> datos = this.jdbcTemplate.queryForList(sql);
+//        mav.addObject("datos", datos);
         mav.setViewName("MenuRRHH/verPostulaciones");
 
         return mav;

@@ -24,15 +24,18 @@
                             </div>
                         </div>
                         <div class="panel-body">
+<!--                         <form action="j_spring_security_check" method="post"> -->
                             <form id="needs-validation" action="menu.htm" method="post" accept-charset="UTF-8" role="form" class="form-signin" novalidate>
                                 <fieldset>
                                     <label class="panel-login">
                                         <div class="login_result"></div>
                                     </label>
                                     <div class="input-group">
+<!--                                     <input type="text" name="j_username" /> -->
                                         <!--<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
                                         <input style="margin-bottom:5px;" class="form-control" name="rut" placeholder="Usuario" id="username" type="text"  required>
                                     </div>
+<!--                                     <input type="password" name="j_password" /> -->
                                     <input  class="form-control" name="pass" placeholder="Contraseña" id="password" type="password" required>                              
                                     <p></p>
                                     <br>
