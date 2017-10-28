@@ -18,7 +18,7 @@
     </head>
     <body>
 
-        <jsp:include page="Head.jsp" />
+        <jsp:include page="Reduce/Head.jsp" />
 
         <br>
         
@@ -28,6 +28,6 @@
             </div>
         </div>
 
-        <jsp:include page="Footer.jsp" />
+        <jsp:include page="Reduce/Footer.jsp" />
     </body>
 </html>

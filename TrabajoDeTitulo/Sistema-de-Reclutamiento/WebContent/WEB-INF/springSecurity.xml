@@ -9,18 +9,34 @@
     <!-- enable use-expressions -->
 	<http auto-config="true" use-expressions="true">
 
-<!-- 		<intercept-url pattern="/index**" access="hasRole('ROLE_ADMIN')" /> -->
-
+		<intercept-url pattern="/menu**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN','ROLE_PSICOLOGO', 'ROLE_RRHH', 'ROLE_SECRETARIA')" />
+		
+<!-- 		// Secretaria ========================= -->
+		<intercept-url pattern="/buscarCurriculum**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_SECRETARIA')" />
+		<intercept-url pattern="/ingresarCurriculum**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_SECRETARIA')" />
+		<intercept-url pattern="/modificarCurriculum**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_SECRETARIA')" />
+		
+<!-- 		// RRHH =============================== -->
+		<intercept-url pattern="/verPostulaciones**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_RRHH')"  />
+		
+<!-- 		// USUARIO ============================ -->
+		<intercept-url pattern="/pruebaConocimiento**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"  />
+		<intercept-url pattern="/verEstado**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
+		
+<!-- 		// Psicologo ========================== -->
+		<intercept-url pattern="/evaluarPostulante**" access="hasAnyRole('ROLE_ADMIN','ROLE_PSICOLOGO')"  />
+		<intercept-url pattern="/pruebaPsicologica**" access="hasAnyRole('ROLE_ADMIN','ROLE_PSICOLOGO')"  />
+		
 		<!-- access denied page --> 	
 		<access-denied-handler error-page="/403" />
 
 		<form-login
-		    login-page="/index"
-		    default-target-url="/welcome"
-			authentication-failure-url="/index?error"
+		    login-page="/InicioSesion"
+		    default-target-url="/menu"
+			authentication-failure-url="/InicioSesion?error"
 			username-parameter="username"
 			password-parameter="password" />
-		<logout logout-success-url="/index?logout"  />
+		<logout logout-success-url="/InicioSesion?logout"  />
 		<!-- enable csrf protection -->
 		<csrf/>
 	</http>
