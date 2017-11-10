@@ -72,7 +72,7 @@
 			<div class="msg">${msg}</div>
 		</c:if>
 					
-						<form name='loginForm' action="<c:url value='/j_spring_security_check' />" method='POST'>
+						<form name='loginForm' action="<c:url value='/login' />" method='POST'>
 							<!--                             <form id="needs-validation" action="menu.htm" method="post" accept-charset="UTF-8" role="form" class="form-signin" novalidate> -->
 							<fieldset>
 								<label class="panel-login">
