@@ -7,8 +7,17 @@ public class Prueba {
 	int id_prueba;
 	int puntaje;
 	Date fecha;
-	int pregunta;
-	int respuesta;
+	String rut_postulante ;
+	byte pruebaConocimiento;
+	
+	public Prueba(int id_prueba, int puntaje, Date fecha, String rut_postulante, byte pruebaConocimiento) {
+		super();
+		this.id_prueba = id_prueba;
+		this.puntaje = puntaje;
+		this.fecha = fecha;
+		this.rut_postulante = rut_postulante;
+		this.pruebaConocimiento = pruebaConocimiento;
+	}
 
 	public int getId_prueba() {
 		return id_prueba;
@@ -34,20 +43,22 @@ public class Prueba {
 		this.fecha = fecha;
 	}
 
-	public int getPregunta() {
-		return pregunta;
+	public String getRut_postulante() {
+		return rut_postulante;
 	}
 
-	public void setPregunta(int pregunta) {
-		this.pregunta = pregunta;
+	public void setRut_postulante(String rut_postulante) {
+		this.rut_postulante = rut_postulante;
 	}
 
-	public int getRespuesta() {
-		return respuesta;
+	public byte getPruebaConocimiento() {
+		return pruebaConocimiento;
 	}
 
-	public void setRespuesta(int respuesta) {
-		this.respuesta = respuesta;
+	public void setPruebaConocimiento(byte pruebaConocimiento) {
+		this.pruebaConocimiento = pruebaConocimiento;
 	}
-
+	
+	
+	
 }

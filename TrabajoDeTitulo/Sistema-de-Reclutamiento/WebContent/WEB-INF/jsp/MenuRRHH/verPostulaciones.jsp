@@ -38,21 +38,35 @@
                             <thead>
                                 <tr class="bg-primary">
                                     <th>ID</th>
-                                    <th>Usuario</th>
-                                    <th>Contraseña</th>
                                     <th>Nombre</th>
-<!--                                     <th>Fecha</th> -->
-<!--                                     <th>Puntos</th> -->
-<!--                                     <th>Ficha</th> -->
+                                    <th>Apellido</th>
+                                    <th>Rut</th>
+                                    <th>Edad</th>
+                                    <th>Años Experiencia</th>
+                                    <th>Pretencion de Sueldo</th>
+                                    <th>Telefono</th>
+                                    <th>Direccion</th>
+                                    <th>contraseña</th>
+<!--                                     <th>Curriculum</th> -->
+<!--                                     <th>Prueba Psicologica</th> -->
+<!--                                     <th>Prueba Conocimiento</th> -->
                                 </tr>
                             </thead>
                             <tbody>
-	                            <c:forEach items="${datos}" var="dato">
+	                            <c:forEach var="postulante" items="${listPostulante}" varStatus="status">
 	                            	 <tr>
-	                                    <th scope="row"><c:out value="${dato.id}"></c:out></th>
-	                                    <th scope="row"><c:out value="${dato.user}"></c:out></th>
-	                                    <th scope="row"><c:out value="${dato.pass}"></c:out></th>
-	                                    <th scope="row"><c:out value="${dato.nombre}"></c:out></th>
+	                            	 	 <td>${postulante.id}</td>
+	                            	 	 <td>${postulante.nombre}</td>
+	                            	 	 <td>${postulante.apellido}</td>
+	                            	 	 <td>${postulante.rut}</td>
+	                            	 	 <td>${postulante.aexp}</td>
+	                            	 	 <td>${postulante.psueldo}</td>
+	                            	 	 <td>${postulante.telefono}</td>
+	                            	 	 <td>${postulante.direccion}</td>
+	                            	 	 <td>${postulante.clave}</td>
+<%-- 	                                    <th scope="row"><a class="btn btn-primary" href="<c:out value="${dato.curriculum}"></c:out>" role="button">Ver Curriculum</a></th> --%>
+<%-- 	                                    <th scope="row"><a class="btn btn-primary" href="<c:out value="${dato.Ppsicologica}"></c:out>" role="button">Ver Prueba Psicologica</a></th> --%>
+<%-- 	                                    <th scope="row"><a class="btn btn-primary" href="<c:out value="${dato.Pconocimiento}"></c:out>" role="button">Ver Prueba Conocimiento</a></th> --%>
 	                                </tr>
 	                            </c:forEach>
                             </tbody>

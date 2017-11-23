@@ -24,7 +24,7 @@
 
         <div class="JumboT jumbotron-fluid">
             <div class="container">
-                <center><h1 class="display-4">Prueba Psicologica</h1></center>
+                <center><h1 class="display-4">Evaluar Prueba Psicologica</h1></center>
             </div>
         </div>
 
@@ -37,20 +37,51 @@
 
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <form id="validacion-live" class="form-horizontal">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">RUT Postulante:</span>
-                                    <input id="rut" name="rut" type="text" class="form-control" placeholder="RUT" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input id="rut" name="rut" type="text" class="form-control" placeholder="RUT" aria-label="Username" aria-describedby="basic-addon1" required>
                                 </div>
-                            </form>
-                            <div class="col-md-4"></div>
                         </div>
+                        <div class="col-md-4"></div>
                     </div>
+                    <br>
+                    <div class="row">
+
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">Nota Postulante:</span>
+                                    <input id="nota" name="nota" type="text" class="form-control" placeholder="Nota" aria-label="nota" aria-describedby="basic-addon1" required>
+                                </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="alert alert-danger" role="alert">
+                                <b>*</b> Adjuntar archivos escaneados en formato PDF <br>
+                                <b>*</b> Nombrar archivo .PDF con PS + el RUT del postulante sin puntos con Guion<br>
+                                <b>*</b> Ejemplo: PS12345678-0.PDF<br>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <input id="input-b6" name="input-b6[]" type="file" class="file" required>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    
                     <br><hr>
                     <div class="row">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <button type="button" class="btn btn-primary btn-lg">Realizar Prueba »</button>
+                            <button type="button" class="btn btn-primary btn-lg">Guardar »</button>
                         </div>
                         <div class="col-md-4"></div>
                     </div>

@@ -5,25 +5,18 @@ public class Usuario {
 	int idusuario;
 	String nombre;
 	String apellido;
-	String contraseña;
+	String clave;
 	String rut;
 	String cargo;
-
-	public Usuario(int idusuario, String nombre, String apellido, String contraseña, String rut, String cargo) {
+	
+	public Usuario(int idusuario, String nombre, String apellido, String clave, String rut, String cargo) {
+		super();
 		this.idusuario = idusuario;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.contraseña = contraseña;
+		this.clave = clave;
 		this.rut = rut;
 		this.cargo = cargo;
-	}
-
-	public String getContraseña() {
-		return contraseña;
-	}
-
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
 	}
 
 	public int getIdusuario() {
@@ -50,6 +43,14 @@ public class Usuario {
 		this.apellido = apellido;
 	}
 
+	public String getClave() {
+		return clave;
+	}
+
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
+
 	public String getRut() {
 		return rut;
 	}
@@ -65,5 +66,7 @@ public class Usuario {
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
+
+	
 
 }

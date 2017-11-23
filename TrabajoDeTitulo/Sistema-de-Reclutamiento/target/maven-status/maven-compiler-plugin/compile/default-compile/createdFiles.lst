@@ -1,1 +1,15 @@
-controller\WebController.class
+com\reclutamiento\dao\PostulanteDAO.class
+com\reclutamiento\dao\UsuarioDAO.class
+com\reclutamiento\bean\Prueba.class
+com\reclutamiento\bean\informe_psicologico.class
+com\reclutamiento\controller\ModifyController.class
+com\reclutamiento\controller\WebController.class
+com\reclutamiento\dao\PostulanteDAOImpl$2.class
+com\reclutamiento\bean\Postulante.class
+com\reclutamiento\bean\Usuario.class
+com\reclutamiento\controller\SearchController.class
+com\reclutamiento\dao\UsuarioDAOImpl.class
+com\reclutamiento\dao\PostulanteDAOImpl$1.class
+com\reclutamiento\controller\DeleteController.class
+com\reclutamiento\dao\PostulanteDAOImpl.class
+com\reclutamiento\controller\InsertController.class

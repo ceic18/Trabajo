@@ -16,15 +16,15 @@
 	<context:component-scan base-package="com.reclutamiento" />
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 
-	<!-- <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/> -->
-
-	<!-- <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"> -->
-	<!-- <property name="mappings"> -->
-	<!-- <props> -->
-	<!-- <prop key="index.htm">WebController</prop> -->
-	<!-- </props> -->
-	<!-- </property> -->
-	<!-- </bean> -->
+<!-- 	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"> -->
+<!-- 	<property name="mappings"> -->
+<!-- 	<props> -->
+<!-- 	<prop key="InicioSesion.htm">WebController</prop> -->
+<!-- 	<prop key="modificarPostulante.htm">SearchController</prop> -->
+<!-- 	<prop key="ingresarPostulante.htm">InsertController</prop> -->
+<!-- 	</props> -->
+<!-- 	</property> -->
+<!-- 	</bean> -->
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -36,21 +36,13 @@
 		</bean>
 	</mvc:interceptors>
 	<!-- The index controller. -->
-	<!-- <bean name="indexController" -->
-	<!-- class="org.springframework.web.servlet.mvc.ParameterizableViewController" -->
-	<!-- p:viewName="index" /> -->
 
-	<!-- <bean name="WebController" class="com.reclutamiento.controller.WebController" 
-		/> -->
+<!-- 	<bean name="WebController" class="com.reclutamiento.controller.WebController" /> --> 
+<!-- 	<bean name="SearchController" class="com.reclutamiento.controller.SearchController" /> -->
+<!-- 	<bean name="InsertController" class="com.reclutamiento.controller.InsertController" /> -->
+	
+	
 
-<!-- 	<bean id="dataSource" -->
-<!-- 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
-
-<!-- 		<property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
-<!-- 		<property name="url" value="jdbc:mysql://localhost:3306/reclutamiento" /> -->
-<!-- 		<property name="username" value="root" /> -->
-<!-- 		<property name="password" value="" /> -->
-<!-- 	</bean> -->
 
 
 </beans>

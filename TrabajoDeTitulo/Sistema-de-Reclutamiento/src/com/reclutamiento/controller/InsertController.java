@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.reclutamiento.bean.Postulante;
+import com.reclutamiento.bean.Usuario;
 import com.reclutamiento.dao.PostulanteDAO;
+import com.reclutamiento.dao.UsuarioDAO;
 
 @Controller
 public class InsertController {
@@ -16,13 +18,9 @@ public class InsertController {
 	@Autowired
 	private PostulanteDAO postulanteDAO;
 	
-	@RequestMapping(value = "/nuevoPostulante", method = RequestMethod.GET)
-	public ModelAndView nuevoPostulante(ModelAndView model) {
-		Postulante nuevoPostulante = new Postulante();
-	    model.addObject("postulante", nuevoPostulante);
-	    model.setViewName("PostulanteForm");
-	    return model;
-	}
+	@Autowired
+	private UsuarioDAO usuarioDAO;
+	
 	
 	@RequestMapping(value = "/guardarPostulante", method = RequestMethod.POST)
 	public ModelAndView saveContact(@ModelAttribute Postulante postulante) {

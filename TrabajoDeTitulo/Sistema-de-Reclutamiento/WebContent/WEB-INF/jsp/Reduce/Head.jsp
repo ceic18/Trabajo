@@ -34,9 +34,9 @@
                     Menu Secretaria
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="<c:url value = "ingresarCurriculum"/>">Ingresar Curriculum</a>
-                    <a class="dropdown-item" href="<c:url value = "modificarCurriculum"/>">Modificar Curriculum</a>
-                    <a class="dropdown-item" href="<c:url value = "buscarCurriculum"/>">Buscar Curriculum</a>
+                    <a class="dropdown-item" href="<c:url value = "ingresarPostulante"/>">Ingresar Postulante</a>
+                    <a class="dropdown-item" href="<c:url value = "listaPostulante"/>">Lista Postulante</a>
+                    <a class="dropdown-item" href="<c:url value = "buscarPostulante"/>">Buscar Postulante</a>
                 </div>
             </li>
          </sec:authorize>
@@ -46,8 +46,8 @@
                     Menu Psicologo
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="<c:url value = "pruebaPsicologica"/>">Realizar Prueba Psicologica</a>
-                    <a class="dropdown-item" href="<c:url value = "evaluarPostulante"/>">Realizar Evaluacion Postulante</a>
+                    <a class="dropdown-item" href="<c:url value = "pruebaPsicologica"/>">Evaluar Prueba Psicologica</a>
+                    <a class="dropdown-item" href="<c:url value = "evaluarPostulante"/>">Evaluacion Personal - Postulante</a>
                 </div>
             </li>
           </sec:authorize>
@@ -67,7 +67,6 @@
                     Menu Usuario
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="<c:url value = "pruebaConocimiento"/>">Realizar Prueba de Conocimiento</a>
                     <a class="dropdown-item" href="<c:url value = "verEstado"/>">Ver estado Postulacion</a>
                 </div>
             </li>
