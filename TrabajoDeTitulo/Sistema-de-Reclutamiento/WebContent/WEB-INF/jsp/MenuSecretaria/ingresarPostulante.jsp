@@ -193,11 +193,6 @@
                     $("#rut").addClass("is-valid");
                 });
             });
-            
-//             $("#btn").click(function (e) {
-//                 e.preventDefault();
-//                 alert($("#contraseña").val());
-//             });
         </script>
     </body>
 </html>

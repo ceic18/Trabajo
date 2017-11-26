@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.reclutamiento.bean.Postulante;
 import com.reclutamiento.bean.Usuario;
+import com.reclutamiento.bean.informe_psicologico;
 import com.reclutamiento.dao.PostulanteDAO;
 import com.reclutamiento.dao.UsuarioDAO;
 
@@ -27,9 +28,6 @@ public class SearchController {
 
 	@Autowired
 	private PostulanteDAO postulanteDAO;
-	
-	@Autowired
-	private UsuarioDAO usuarioDAO;
 	
 	@RequestMapping(value = "/searchPostulante", method = RequestMethod.POST)
 	public ModelAndView searchPostulante(HttpServletRequest request) {
@@ -45,17 +43,17 @@ public class SearchController {
 		List<Postulante> listaPostulantes = postulanteDAO.list();
 		model.addObject("listaPostulantes", listaPostulantes);
 		model.setViewName("MenuSecretaria/listaPostulante");
-		
 		return model;
 	}
 	
-//	@RequestMapping(value="/")
-//	public ModelAndView listaPostulantes(ModelAndView model) throws IOException{
-//	    List<Postulante> listContact = postulanteDAO.list();
-//	    model.addObject("listContact", listContact);
-//	    model.setViewName("home");
-//	 
-//	    return model;
-//	}
+	@RequestMapping(value = "/searchInforme", method = RequestMethod.POST)
+	public ModelAndView searchInforme(HttpServletRequest request) {
+	    String rut_postulante = request.getParameter("rut_postulante");
+	    informe_psicologico informe = postulanteDAO.searchInforme(rut_postulante);
+	    ModelAndView model = new ModelAndView("MenuPsicologo/buscarInformeDatos");
+	    model.addObject("informe", informe);
+	    return model;
+	}	
+	
 
 }

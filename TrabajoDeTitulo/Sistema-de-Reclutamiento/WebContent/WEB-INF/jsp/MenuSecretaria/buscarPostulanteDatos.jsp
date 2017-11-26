@@ -35,7 +35,6 @@
 	</div>
 
 	<div class="container">
-	<form:form action="searchPostulante" method="post" commandName="postulante">
 		<div style="text-align: left" class="container">
 			<table
 				class="table table-striped table-inverse table-bordered table-sm ">
@@ -52,6 +51,7 @@
 						<th>direccion</th>
 						<th>clave</th>
 						<th>curriculum</th>
+						<th>Accion</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -66,13 +66,13 @@
                 <td>${postulante.telefono}</td>
                 <td>${postulante.direccion}</td>
                 <td>${postulante.clave}</td>
-                 <td><button class="btn btn-primary centered" type="Button" value="">Descargar CV</button></td>
-            </tr>       
+            	<td><button class="btn btn-primary btn-sm centered" type="Button" value="">Descargar CV</button></td>
+				<td><a href="modificarPostulante?rut=${postulante.rut}" class="btn btn-primary btn-sm active" role="button" >Editar</a> | 
+				<a href="eliminarPostulante?rut=${postulante.rut}" class="btn btn-warning btn-sm active" role="button" >Eliminar</a></td>
+			</tr>       
 				</tbody>
 			</table>
 		</div>
-		        </form:form>
-		
 	</div>
 
 

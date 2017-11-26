@@ -79,7 +79,7 @@
 									<div class="login_result"></div>
 								</label>
 								<div class="input-group">
-									<input style="margin-bottom: 5px;" class="form-control" name="username" placeholder="Usuario" id="username" type="text" required>
+									<input style="margin-bottom: 5px;" class="form-control" name="username" placeholder="Usuario EJ: 1.234.567-0" id="username" type="text" required>
 								</div>
 									<input class="form-control" name="password" placeholder="Contraseña" id="password" type="password" required>
 								<p></p>
@@ -100,21 +100,5 @@
 
 
 
-	<script>
-		// Example starter JavaScript for disabling form submissions if there are invalid fields
-		(function() {
-			"use strict";
-			window.addEventListener("load", function() {
-				var form = document.getElementById("needs-validation");
-				form.addEventListener("submit", function(event) {
-					if (form.checkValidity() == false) {
-						event.preventDefault();
-						event.stopPropagation();
-					}
-					form.classList.add("was-validated");
-				}, false);
-			}, false);
-		}());
-	</script>
 </body>
 </html>

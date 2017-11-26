@@ -1,5 +1,7 @@
 package com.reclutamiento.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,7 +18,8 @@ import com.reclutamiento.dao.PostulanteDAO;
 @Controller
 public class WebController {
 
-
+	@Autowired
+	private PostulanteDAO postulanteDAO;
 //	@RequestMapping(value = {"/", "/InicioSesion**" }, method = RequestMethod.GET)
 //	public ModelAndView defaultPage() {
 //
@@ -78,15 +81,6 @@ public class WebController {
       return mav;
   }
   
-//  @RequestMapping("/modificarPostulante")
-//  public ModelAndView modificarPostulante() {
-//	  
-//	  ModelAndView mav = new ModelAndView();
-//	  mav.setViewName("MenuSecretaria/modificarPostulante");
-//	  
-//	  return mav;
-//  }
-  
   @RequestMapping("/buscarPostulante")
   public ModelAndView buscarPostulante() {
 	  
@@ -97,21 +91,13 @@ public class WebController {
   }
   
 // Usuario ===================================================
-  @RequestMapping("/pruebaConocimiento")
-  public ModelAndView pruebaConocimiento() {
-  	
-      ModelAndView mav = new ModelAndView();
-      mav.setViewName("MenuUsuario/pruebaConocimiento");
-
-      return mav;
-  }
   @RequestMapping("/verEstado")
-  public ModelAndView verEstado() {
-	  
-	  ModelAndView mav = new ModelAndView();
-	  mav.setViewName("MenuUsuario/verEstado");
-	  
-	  return mav;
+  public ModelAndView buscarPostulante(HttpServletRequest request) {
+			String rut = request.getParameter("rut");
+		    Postulante postulante = postulanteDAO.verEstadoPostulacion(rut);
+		    ModelAndView model = new ModelAndView("MenuUsuario/verEstado");
+		    model.addObject("postulante", postulante);
+		    return model;
   }
   
 // RRHH ======================================================
@@ -134,11 +120,11 @@ public class WebController {
       return mav;
   }
   
-  @RequestMapping("/evaluarPostulante")
-  public ModelAndView evaluarPostulante() {
+  @RequestMapping("/buscarInforme")
+  public ModelAndView buscarInforme() {
 	  
 	  ModelAndView mav = new ModelAndView();
-	  mav.setViewName("MenuPsicologo/evaluarPostulante");
+	  mav.setViewName("MenuPsicologo/buscarInforme");
 	  
 	  return mav;
   }

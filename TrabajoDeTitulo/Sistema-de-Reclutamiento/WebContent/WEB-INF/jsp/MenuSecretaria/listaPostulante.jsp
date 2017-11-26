@@ -71,9 +71,10 @@
 								<td>${postulante.telefono}</td>
 								<td>${postulante.direccion}</td>
 								<td>${postulante.clave}</td>
-								<td><button class="btn btn-primary centered" type="Button" value="">Descargar CV</button></td>
-								<td><a href="#" class="btn btn-primary active" role="button" >Editar</a> | <button class="btn btn-warning centered" type="Button" value="">Eliminar</button></td>
-							</tr>
+				            	<td><button class="btn btn-primary btn-sm centered" type="Button" value="">Descargar CV</button></td>
+								<td><a href="modificarPostulante?rut=${postulante.rut}" class="btn btn-primary btn-sm active" role="button" >Editar</a> | 
+								<a href="eliminarPostulante?rut=${postulante.rut}" class="btn btn-warning btn-sm active" role="button" >Eliminar</a></td>
+						</tr>
 						</c:forEach>
 					</tbody>
 				</table>

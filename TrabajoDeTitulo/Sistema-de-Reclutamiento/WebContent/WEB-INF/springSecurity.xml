@@ -14,7 +14,9 @@
 <!-- 		// Secretaria ========================= -->
 		<intercept-url pattern="/buscarPostulante**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_SECRETARIA')" />
 		<intercept-url pattern="/ingresarPostulante**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_SECRETARIA')" />
-		<intercept-url pattern="/modificarPostulante**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_SECRETARIA')" />
+		<intercept-url pattern="/buscarPostulanteDatos**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_SECRETARIA')" />
+		<intercept-url pattern="/modificarPostulanteDatos**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_SECRETARIA')" />
+		<intercept-url pattern="/listaPostulante**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_SECRETARIA')" />
 		
 <!-- 		// RRHH =============================== -->
 		<intercept-url pattern="/verPostulaciones**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_RRHH')"  />
@@ -24,7 +26,9 @@
 		<intercept-url pattern="/verEstado**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
 		
 <!-- 		// Psicologo ========================== -->
-		<intercept-url pattern="/evaluarPostulante**" access="hasAnyRole('ROLE_ADMIN','ROLE_PSICOLOGO')"  />
+		<intercept-url pattern="/buscarInforme**" access="hasAnyRole('ROLE_ADMIN','ROLE_PSICOLOGO')"  />
+		<intercept-url pattern="/buscarInformeDatos**" access="hasAnyRole('ROLE_ADMIN','ROLE_PSICOLOGO')"  />
+		<intercept-url pattern="/ModificarInformeDatos**" access="hasAnyRole('ROLE_ADMIN','ROLE_PSICOLOGO')"  />
 		<intercept-url pattern="/pruebaPsicologica**" access="hasAnyRole('ROLE_ADMIN','ROLE_PSICOLOGO')"  />
 		
 		<!-- access denied page --> 	

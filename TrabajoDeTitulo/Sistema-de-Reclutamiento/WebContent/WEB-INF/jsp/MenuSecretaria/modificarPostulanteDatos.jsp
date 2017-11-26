@@ -23,19 +23,8 @@
 	            	if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;
 	            }
             </script>
-            
-            <script>
-	            $(window).on( "load", function() {
-				var chars = "0123456789"; 
-				var lon = 4;
-				var code = ""; 
-				for (x=1; x <= lon; x++){ 
-				rand = Math.floor(Math.random()*chars.length); 
-				code += chars.substr(rand, 1); 
-				} 
-				$("#clave").val(code); 
-				}); 
-			</script>
+           
+
     </head>
     <body>
 
@@ -49,23 +38,24 @@
             </div>
         </div>
         
-		<form:form id="validacion-live" class="form-horizontal" action="guardarPostulante" method="post" modelAttribute="postulante">
+		<form:form id="validacion-live" class="form-horizontal" action="guardarCambiosPostulante" method="post" modelAttribute="postulante">
         <div class="container">
 
             <div style="height: auto"  class="JumboT jumbotron Transp">
                 <div class="container">
                     <div class="row">
+                  		<input type="hidden" id="idpostulante" name="idpostulante" value="${postulante.idpostulante}"/>
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Nombre:</span>
-                                    <input id="nombre" name="nombre" type="text" class="form-control" placeholder="nombre" aria-label="nombre" aria-describedby="basic-addon1" required>
+                                    <input value="${postulante.nombre}" id="nombre" name="nombre" type="text" class="form-control" placeholder="nombre" aria-label="nombre" aria-describedby="basic-addon1" required>
                                 </div>
                         </div>
                         <div class="col-md-4">
                         		<div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Apellido:</span>
-                                    <input id="apellido" name="apellido" type="text" class="form-control" placeholder="apellido" aria-label="apellido" aria-describedby="basic-addon1" required>
+                                    <input value="${postulante.apellido}" id="apellido" name="apellido" type="text" class="form-control" placeholder="apellido" aria-label="apellido" aria-describedby="basic-addon1" required>
                                 </div>
                         </div>
                         <div class="col-md-2"></div>
@@ -76,13 +66,13 @@
                         <div class="col-md-4">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">RUT:</span>
-                                    <input id="rut" name="rut" type="text" class="form-control" placeholder="RUT" aria-label="Username" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
+                                    <input value="${postulante.rut}" id="rut" name="rut" type="text" class="form-control" placeholder="RUT" aria-label="Username" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
                                 </div>
                         </div>
                         <div class="col-md-4">
                         		<div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Edad:</span>
-                                    <input id="edad" name="edad" type="text" class="form-control" placeholder="edad" aria-label="edad" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
+                                    <input value="${postulante.edad}" id="edad" name="edad" type="text" class="form-control" placeholder="edad" aria-label="edad" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
                                 </div>
                         </div>
                         <div class="col-md-2"></div>
@@ -93,13 +83,13 @@
                         <div class="col-md-4">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Años Experiencia:</span>
-                                    <input id="anos_exp" name="anos_exp" type="text" class="form-control" placeholder="Ej: 2" aria-label="anos_exp" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
+                                    <input value="${postulante.anos_exp}" id="anos_exp" name="anos_exp" type="text" class="form-control" placeholder="Ej: 2" aria-label="anos_exp" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
                                 </div>
                         </div>
                         <div class="col-md-4">
                         		<div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Pretencion de Sueldo:</span>
-                                    <input id="pretencion_sueldo" name="pretencion_sueldo" type="text" class="form-control" placeholder="Ej: 1.000.000" aria-label="pretencion_sueldo" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
+                                    <input value="${postulante.pretencion_sueldo}" id="pretencion_sueldo" name="pretencion_sueldo" type="text" class="form-control" placeholder="Ej: 1.000.000" aria-label="pretencion_sueldo" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
                                 </div>
                         </div>
                         <div class="col-md-2"></div>
@@ -110,13 +100,13 @@
                         <div class="col-md-4">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Telefono:</span>
-                                    <input id="telefono" name="telefono" type="text" class="form-control" placeholder="telefono" aria-label="telefono" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
+                                    <input value="${postulante.telefono}" id="telefono" name="telefono" type="text" class="form-control" placeholder="telefono" aria-label="telefono" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
                                 </div>
                         </div>
                         <div class="col-md-4">
                         		<div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Direccion:</span>
-                                    <input id="direccion" name="direccion" type="text" class="form-control" placeholder="direccion" aria-label="direccion" aria-describedby="basic-addon1" required>
+                                    <input value="${postulante.direccion}" id="direccion" name="direccion" type="text" class="form-control" placeholder="direccion" aria-label="direccion" aria-describedby="basic-addon1" required>
                                 </div>
                         </div>
                         <div class="col-md-2"></div>
@@ -137,40 +127,41 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
                                 <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Contraseña Generada:</span>
-                                    <input readonly id="clave" name="clave" type="text" class="form-control" placeholder="Ej: 2" aria-label="clave" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
+                                    <span class="input-group-addon" id="basic-addon1">Contraseña:</span>
+                                    <input value="${postulante.clave}" id="clave" name="clave" type="text" class="form-control" placeholder="Ej: 2" aria-label="clave" aria-describedby="basic-addon1" onKeypress="onlyNumber()" required>
                                 </div>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
-                    <br>
+<!--                     <br> -->
                                                 
                     
                     
-                    <div class="row">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-6">
-                            <div class="alert alert-danger" role="alert">
-                                <b>*</b> Adjuntar archivos escaneados Comprimidos en un .RAR <br>
-                                <b>*</b> Nombrar archivo .RAR con el RUT del postulante<br>
-                                <b>*</b> Ejemplo: 12345678-0.rar<br>
-                            </div>
-                        </div>
-                        <div class="col-md-3"></div>
-                    </div>
+<!--                     <div class="row"> -->
+<!--                         <div class="col-md-3"></div> -->
+<!--                         <div class="col-md-6"> -->
+<!--                             <div class="alert alert-danger" role="alert"> -->
+<!--                                 <b>*</b> Adjuntar archivos escaneados Comprimidos en un .RAR <br> -->
+<!--                                 <b>*</b> Nombrar archivo .RAR con el RUT del postulante<br> -->
+<!--                                 <b>*</b> Ejemplo: 12345678-0.rar<br> -->
+<!--                             </div> -->
+<!--                         </div> -->
+<!--                         <div class="col-md-3"></div> -->
+<!--                     </div> -->
 
-                    <div class="row">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4">
-                            <input id="input-b6" name="input-b6[]" type="file" class="file" required>
-                        </div>
-                        <div class="col-md-4"></div>
-                    </div>
+<!--                     <div class="row"> -->
+<!--                         <div class="col-md-4"></div> -->
+<!--                         <div class="col-md-4"> -->
+<!--                             <input id="input-b6" name="input-b6[]" type="file" class="file" -->
+<!--                             > -->
+<!--                         </div> -->
+<!--                         <div class="col-md-4"></div> -->
+<!--                     </div> -->
                     <br><hr>
                     <div class="row">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <button type="submit" id="btn" class="btn btn-primary btn-lg">Guardar Postulante »</button>
+                            <button type="submit" id="btn" class="btn btn-primary btn-lg">Guardar Modificaciones »</button>
                         </div>
                         <div class="col-md-4"></div>
                     </div>

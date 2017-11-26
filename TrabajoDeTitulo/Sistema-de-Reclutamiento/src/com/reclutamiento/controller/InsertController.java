@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.reclutamiento.bean.Postulante;
 import com.reclutamiento.bean.Usuario;
+import com.reclutamiento.bean.informe_psicologico;
 import com.reclutamiento.dao.PostulanteDAO;
 import com.reclutamiento.dao.UsuarioDAO;
 
@@ -18,13 +19,15 @@ public class InsertController {
 	@Autowired
 	private PostulanteDAO postulanteDAO;
 	
-	@Autowired
-	private UsuarioDAO usuarioDAO;
-	
-	
 	@RequestMapping(value = "/guardarPostulante", method = RequestMethod.POST)
 	public ModelAndView saveContact(@ModelAttribute Postulante postulante) {
 		postulanteDAO.guardarPostulante(postulante);
+	    return new ModelAndView("redirect:/menu");
+	}
+	
+	@RequestMapping(value = "/guardarInformePostulante", method = RequestMethod.POST)
+	public ModelAndView guardarInformePostulante(@ModelAttribute informe_psicologico informe) {
+		postulanteDAO.guardarInformePostulante(informe);
 	    return new ModelAndView("redirect:/menu");
 	}
 	

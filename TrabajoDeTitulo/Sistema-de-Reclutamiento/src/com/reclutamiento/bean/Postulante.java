@@ -13,6 +13,7 @@ public class Postulante {
 	int telefono;
 	byte curriclum;
 	int clave;
+	String estado;
 
 	public Postulante() {
 		super();
@@ -22,7 +23,7 @@ public class Postulante {
 	// private Postulante postulante;
 
 	public Postulante(int idpostulante, String nombre, String apellido, String rut, String direccion, int edad,
-			int anos_exp, int pretencion_sueldo, int telefono, byte curriclum, int clave) {
+			int anos_exp, int pretencion_sueldo, int telefono, byte curriclum, int clave, String estado) {
 		this.idpostulante = idpostulante;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -34,6 +35,15 @@ public class Postulante {
 		this.telefono = telefono;
 		this.curriclum = curriclum;
 		this.clave = clave;
+		this.estado = estado;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 
 	public Postulante(String nombre) {

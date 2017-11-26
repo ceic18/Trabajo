@@ -1,5 +1,7 @@
 package com.reclutamiento.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,7 +23,18 @@ public class DeleteController {
 	@Autowired
 	private UsuarioDAO usuarioDAO;
 	
-	
+	@RequestMapping(value = "/eliminarPostulante", method = RequestMethod.GET)
+	public ModelAndView eliminarPostulante(HttpServletRequest request) {
+		String rut = request.getParameter("rut");
+	    postulanteDAO.eliminarPostulante(rut);
+	    return new ModelAndView("redirect:/menu");
+	}
 
+	@RequestMapping(value = "/eliminarInforme", method = RequestMethod.GET)
+	public ModelAndView eliminarInforme(HttpServletRequest request) {
+		String rut_postulante = request.getParameter("rut_postulante");
+	    postulanteDAO.eliminarInforme(rut_postulante);
+	    return new ModelAndView("redirect:/menu");
+	}
 	
 }

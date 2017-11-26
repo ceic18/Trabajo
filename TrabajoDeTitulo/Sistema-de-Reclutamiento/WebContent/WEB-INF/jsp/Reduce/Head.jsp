@@ -47,7 +47,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="<c:url value = "pruebaPsicologica"/>">Evaluar Prueba Psicologica</a>
-                    <a class="dropdown-item" href="<c:url value = "evaluarPostulante"/>">Evaluacion Personal - Postulante</a>
+                    <a class="dropdown-item" href="<c:url value = "buscarInforme"/>">Modificar Evaluacion - Postulante</a>
                 </div>
             </li>
           </sec:authorize>
@@ -67,7 +67,7 @@
                     Menu Usuario
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="<c:url value = "verEstado"/>">Ver estado Postulacion</a>
+                    <a class="dropdown-item" href="<c:url value = "verEstado?rut=${pageContext.request.userPrincipal.name}"/>">Ver estado Postulacion</a>
                 </div>
             </li>
           </sec:authorize>
